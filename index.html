@@ -38,6 +38,23 @@
             margin: 0 20px;
         }
 
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            font-size: 1.01rem;
+            color: rgb(158, 158, 230)
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 85px;
+        }
+
         .left {
             font-size: 1.5rem;
             font-weight: 600;
@@ -46,17 +63,90 @@
         .firstSection {
             display: flex;
             justify-content: space-around;
-            margin: 60px 0;
+            align-items: center;
+            margin: 180px 0;
         }
 
-        .firstSection > div{
+        .firstSection>div {
             width: 30%
         }
-        .leftSection{
+
+        .leftSection {
             font-size: 3.0rem;
         }
-        .rightSection{
+
+        .rightSection {
             background-color: brown;
+        }
+
+        .purple {
+            color: rgb(98, 13, 178);
+        }
+
+        
+        .company {
+            color: rgb(98, 13, 178);
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+        #element {
+            color: rgb(98, 13, 178);
+            font-weight: 600;
+        }
+
+        .heading {
+            color: gray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .experience h1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 1.9rem;
+            color: gray;
+        }
+
+        .experience h3 {
+            color: gray;
+        }
+        .experience h4{
+            color: #6464c4;
+        }
+        .firstExperience, .secondExperience, .thirdExperience {
+            margin: 50px 380px; 
+            text-align: left;
+        }
+
+        .years{
+            float: right; 
+            color: gray;
+        }
+        .projects {
+            margin-top: 20px;
+        }
+        .projects h3{
+            color: white;
+        }
+        .projects strong {
+            color: gray;
+            font-size: 20px;
+        }
+        .project-details{
+            color: gray;
+        }
+        .project-details strong {
+            color: white;
+            font-size: 15px;
+        }
+        .projects-listing {
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -67,11 +157,11 @@
             <div class="left">My Portfolio</div>
             <div class="right">
                 <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
@@ -79,12 +169,94 @@
 
     <main>
         <section class="firstSection">
-            <div class="leftSection">Hello, My name is Sumit
-                <div> and I am a NodeJs Developer</div>
+            <div class="leftSection">Hello, My name is <span class="purple">Sumit</span>
+                <div> and I am a experienced</div>
+                <span id="element"></span>
+                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                <script>
+                    var typed = new Typed('#element', {
+                        strings: ['NodeJs Developer'],
+                        typeSpeed: 50,
+                    });
+                </script>
             </div>
             <div class="rightSection">right</div>
         </section>
+
+        <hr>
+
+        <section class="experience">
+            <span class="heading">What I have done so far</span>
+            <h1>Work Experience</h1>
+
+            <div class="firstExperience">
+                <span class="company">Cloud Associate Developer</span>
+                <h3>Niveus Pvt Lmt (Udupi) <span class ="years">(May 2023 - Present)</span></h3>
+                <div class="projects">
+                    <ul>
+                        <li class = "projects-listing">
+                            <h3>Project 1: AMI (Axis My India – GOI Citizen Xchange App)</h3>
+                            <p><strong>Description:</strong> Discover/benefit from government schemes, explore income opportunities based on skills, latest new updates and government survey.</p>
+                            <p><strong>Technologies:</strong> Node js, MySQL.</p>
+                            <ul class="project-details">
+                                <li>Designed and developed scalable <strong>REST APIs</strong> using <strong>Fastify framework</strong> for high-performance backend services.</li>
+                                <li>Developed APIs for <strong>registration, area of interest, government schemes, grievances, surveys, and rewards</strong> modules.</li>
+                                <li>Worked on Geo-location module to capture and process user location data for personalized content and services.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Project 2: DE - Darpan - Phase 2</h3>
+                            <p><strong>Description:</strong> Company’s internal project to manage all the resources and internal information.</p>
+                            <p><strong>Technologies:</strong> Node js, React js, MySQL.</p>
+                            <ul class="project-details">
+                                <li>Developed responsive user interfaces using <strong>React.js</strong> and <strong>Material-UI (MUI)</strong> components.</li>
+                                <li><strong>Integrated RESTful APIs</strong> to fetch and display dynamic data across different UI components.</li>
+                                <li>Applied React concepts such as <strong>state management, props,</strong> and <strong>hooks (useState, useEffect)</strong> for component-based development.</li>
+                                <li>Ensured cross-browser compatibility and responsive design across various screen sizes.</li>
+                                <li>Designed and implemented <strong>RESTful APIs</strong> using backend technologies (e.g.Node.js).</li>
+                                <li>Handled API endpoints for CRUD operations and integrated them with the frontend.</li>
+                                <li>Ensured secure and efficient data handling between frontend and backend layers.</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="secondExperience">
+                <span class="company">Junior Software Development Engineer</span>
+                <h3>Furtados High Music Pvt. Ltd. (Mumbai - Khar)<span class ="years">(Oct 2021 - Apr 2023)</span></h3>
+                <div class="projects">
+                    <ul>
+                        <li class = "projects-listing">
+                            <h3>Project 1: Teacher Dashoard</h3>
+                            <p><strong>Description:</strong> Manage all teacher’s activities like batch scheduling, rescheduling, upcoming sessions, student attendance, send notifications, etc.</p>
+                            <p><strong>Technologies:</strong> Node js, MongoDB, Twilio, Zoom APIs.</p>
+                            <ul class="project-details">
+                                <li>Developed REST APIs for web applications and worked on the notification part.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Project 2: FSM Online Admin Portal </h3>
+                            <p><strong>Description:</strong> A web application to manage daily tasks and to-do listsThis project provides services to other projects like student, teacher dashboard, FSM open marker project.</p>
+                            <p><strong>Technologies:</strong> Node.js, Express, MongoDB, Zoom APIs.</p>
+                            <ul class="project-details">
+                                <li>Developed REST APIs for web applications.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="thirdExperience">
+                <span class="company">Intern Full Stack Developer</span>
+                <h3>Furtados High Music Pvt. Ltd. (Mumbai - Khar)<span class ="years">(Aug 2021 – Oct 2021)</span></h3>
+            </div>
+        </section>
+        
+
     </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </body>
 
 </html>
