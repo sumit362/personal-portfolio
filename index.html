@@ -60,35 +60,37 @@
             font-weight: 600;
         }
 
-        .firstSection {
+        .homeSection {
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             align-items: center;
+            text-align: center;
             margin: 180px 0;
-        }
-
-        .firstSection>div {
-            width: 30%
+            height: 350px;
         }
 
         .leftSection {
             font-size: 3.0rem;
         }
 
-        .rightSection {
-            background-color: brown;
+        .leftSection div {
+            text-align: center;
+            font-size: 20px;
         }
 
         .purple {
+            font-size: 300%;
             color: rgb(98, 13, 178);
+            font-weight: 900;
         }
 
-        
+
         .company {
             color: rgb(98, 13, 178);
             font-weight: 600;
             font-size: 1.6rem;
         }
+
         #element {
             color: rgb(98, 13, 178);
             font-weight: 600;
@@ -103,50 +105,151 @@
             text-align: center;
         }
 
-        .experience h1 {
+        .experienceSection h1 {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             font-size: 1.9rem;
+            color: white;
+        }
+
+        .experienceSection h3 {
             color: gray;
         }
 
-        .experience h3 {
-            color: gray;
-        }
-        .experience h4{
+        .experienceSection h4 {
             color: #6464c4;
         }
-        .firstExperience, .secondExperience, .thirdExperience {
-            margin: 50px 380px; 
+
+        .firstExperience,
+        .secondExperience,
+        .thirdExperience {
+            margin: 50px 380px;
             text-align: left;
         }
 
-        .years{
-            float: right; 
+        .years {
+            float: right;
             color: gray;
         }
+
         .projects {
             margin-top: 20px;
         }
-        .projects h3{
+
+        .projects h3 {
             color: white;
         }
+
         .projects strong {
             color: gray;
             font-size: 20px;
         }
-        .project-details{
+
+        .project-details {
             color: gray;
         }
+
         .project-details strong {
             color: white;
             font-size: 15px;
         }
+
         .projects-listing {
             margin-bottom: 15px;
+        }
+
+        .aboutmeSection {
+            text-align: center;
+            margin: 100px 0 250px 0;
+            height: 320px;
+        }
+
+        .aboutmeSection h1,
+        .skillsSections h1 {
+            font-size: 1.9rem;
+            color: white;
+            text-align: center;
+        }
+
+        .aboutmeHeading,
+        .skillHeading {
+            display: block;
+            color: gray;
+            text-align: center;
+            margin: 0;
+        }
+
+        .aboutmeSection>div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px 160px;
+        }
+
+        .leftAboutMe {
+            width: 40%;
+            text-align: left;
+            color: gray;
+            font-size: 2.5rem;
+        }
+
+        .leftAboutMe span {
+            color: rgb(98, 13, 178);
+        }
+
+        .rightAboutMe {
+            width: 40%;
+            text-align: left;
+            color: gray;
+            font-size: 1.2rem;
+        }
+
+        .skillsContainer {
+            display: flex;
+            justify-content: space-around;
+            align-items: start;
+            margin: 50px 172px 50px 242px;
+        }
+
+        .language,
+        .tools,
+        .services {
+            width: 30%;
+            position: relative;
+        }
+
+        .tools ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 18px;
+            padding-left: 18px;
+        }
+
+        .language strong,
+        .tools strong,
+        .services strong {
+            font-size: 1.8rem;
+            color: rgb(98, 13, 178);
+        }
+
+        .footer {
+            background: #181836;
+            padding: 42px 0;
+            margin-top: 56px;
+        }
+
+        .footerContainer {
+            text-align: center;
+        }
+
+        .footerContainer p {
+            color: #bdbdbd;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            margin: 0;
         }
     </style>
 </head>
@@ -157,64 +260,102 @@
             <div class="left">My Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">About</a></li>
-                    <li><a href="/">Services</a></li>
-                    <li><a href="/">Projects</a></li>
-                    <li><a href="/">Contact Me</a></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="firstSection">
-            <div class="leftSection">Hello, My name is <span class="purple">Sumit</span>
-                <div> and I am a experienced</div>
-                <span id="element"></span>
-                <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-                <script>
-                    var typed = new Typed('#element', {
-                        strings: ['NodeJs Developer'],
-                        typeSpeed: 50,
-                    });
-                </script>
+        <section class="homeSection">
+            <div class="leftSection">
+                <div> I am a
+                    <span id="element"></span>
+                    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+                    <script>
+                        var typed = new Typed('#element', {
+                            strings: ['Web Developer'],
+                            typeSpeed: 50,
+                        });
+                    </script>
+                </div>
+                <span class="purple">SUMIT</span><br><span class="purple">MHATRE</span>
+                <div>
+                    <p>Based in Navi Mumbai, India</p>
+                </div>
             </div>
-            <div class="rightSection">right</div>
         </section>
 
         <hr>
 
-        <section class="experience">
+        <section class="aboutmeSection">
+            <span class="aboutmeHeading">Know Me More</span>
+            <h1>About Me</h1>
+            <div>
+                <div class="leftAboutMe">
+                    Hi, I'm <span>Sumit Mhatre</span> — A MERN Stack Developer with Creative Expertise & Years of
+                    Experience.
+                </div>
+                <div class="rightAboutMe">
+                    <p>As a dedicated software engineer with 4 years of expertise in building robust, scalable back-end
+                        solutions using Node.js, I am also proficient in working with MongoDB, SQL, and React. With a
+                        strong foundation in full-stack development, I focus on delivering seamless, user-friendly
+                        applications and backend services. I am driven to learn emerging technologies and collaborate
+                        with innovative teams to create impactful software that empowers developers and enhances user
+                        experiences.</p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="experienceSection">
             <span class="heading">What I have done so far</span>
             <h1>Work Experience</h1>
 
             <div class="firstExperience">
                 <span class="company">Cloud Associate Developer</span>
-                <h3>Niveus Pvt Lmt (Udupi) <span class ="years">(May 2023 - Present)</span></h3>
+                <h3>Niveus Pvt Lmt (Udupi) <span class="years">(May 2023 - Present)</span></h3>
                 <div class="projects">
                     <ul>
-                        <li class = "projects-listing">
+                        <li class="projects-listing">
                             <h3>Project 1: AMI (Axis My India – GOI Citizen Xchange App)</h3>
-                            <p><strong>Description:</strong> Discover/benefit from government schemes, explore income opportunities based on skills, latest new updates and government survey.</p>
+                            <p><strong>Description:</strong> Discover/benefit from government schemes, explore income
+                                opportunities based on skills, latest new updates and government survey.</p>
                             <p><strong>Technologies:</strong> Node js, MySQL.</p>
                             <ul class="project-details">
-                                <li>Designed and developed scalable <strong>REST APIs</strong> using <strong>Fastify framework</strong> for high-performance backend services.</li>
-                                <li>Developed APIs for <strong>registration, area of interest, government schemes, grievances, surveys, and rewards</strong> modules.</li>
-                                <li>Worked on Geo-location module to capture and process user location data for personalized content and services.</li>
+                                <li>Designed and developed scalable <strong>REST APIs</strong> using <strong>Fastify
+                                        framework</strong> for high-performance backend services.</li>
+                                <li>Developed APIs for <strong>registration, area of interest, government schemes,
+                                        grievances, surveys, and rewards</strong> modules.</li>
+                                <li>Worked on Geo-location module to capture and process user location data for
+                                    personalized content and services.</li>
                             </ul>
                         </li>
                         <li>
                             <h3>Project 2: DE - Darpan - Phase 2</h3>
-                            <p><strong>Description:</strong> Company’s internal project to manage all the resources and internal information.</p>
+                            <p><strong>Description:</strong> Company’s internal project to manage all the resources and
+                                internal information.</p>
                             <p><strong>Technologies:</strong> Node js, React js, MySQL.</p>
                             <ul class="project-details">
-                                <li>Developed responsive user interfaces using <strong>React.js</strong> and <strong>Material-UI (MUI)</strong> components.</li>
-                                <li><strong>Integrated RESTful APIs</strong> to fetch and display dynamic data across different UI components.</li>
-                                <li>Applied React concepts such as <strong>state management, props,</strong> and <strong>hooks (useState, useEffect)</strong> for component-based development.</li>
-                                <li>Ensured cross-browser compatibility and responsive design across various screen sizes.</li>
-                                <li>Designed and implemented <strong>RESTful APIs</strong> using backend technologies (e.g.Node.js).</li>
-                                <li>Handled API endpoints for CRUD operations and integrated them with the frontend.</li>
+                                <li>Developed responsive user interfaces using <strong>React.js</strong> and
+                                    <strong>Material-UI (MUI)</strong> components.
+                                </li>
+                                <li><strong>Integrated RESTful APIs</strong> to fetch and display dynamic data across
+                                    different UI components.</li>
+                                <li>Applied React concepts such as <strong>state management, props,</strong> and
+                                    <strong>hooks (useState, useEffect)</strong> for component-based development.
+                                </li>
+                                <li>Ensured cross-browser compatibility and responsive design across various screen
+                                    sizes.</li>
+                                <li>Designed and implemented <strong>RESTful APIs</strong> using backend technologies
+                                    (e.g.Node.js).</li>
+                                <li>Handled API endpoints for CRUD operations and integrated them with the frontend.
+                                </li>
                                 <li>Ensured secure and efficient data handling between frontend and backend layers.</li>
                             </ul>
                         </li>
@@ -225,12 +366,13 @@
 
             <div class="secondExperience">
                 <span class="company">Junior Software Development Engineer</span>
-                <h3>Furtados High Music Pvt. Ltd. (Mumbai - Khar)<span class ="years">(Oct 2021 - Apr 2023)</span></h3>
+                <h3>Furtados High Music Pvt. Ltd. (Mumbai - Khar)<span class="years">(Oct 2021 - Apr 2023)</span></h3>
                 <div class="projects">
                     <ul>
-                        <li class = "projects-listing">
+                        <li class="projects-listing">
                             <h3>Project 1: Teacher Dashoard</h3>
-                            <p><strong>Description:</strong> Manage all teacher’s activities like batch scheduling, rescheduling, upcoming sessions, student attendance, send notifications, etc.</p>
+                            <p><strong>Description:</strong> Manage all teacher’s activities like batch scheduling,
+                                rescheduling, upcoming sessions, student attendance, send notifications, etc.</p>
                             <p><strong>Technologies:</strong> Node js, MongoDB, Twilio, Zoom APIs.</p>
                             <ul class="project-details">
                                 <li>Developed REST APIs for web applications and worked on the notification part.</li>
@@ -238,7 +380,9 @@
                         </li>
                         <li>
                             <h3>Project 2: FSM Online Admin Portal </h3>
-                            <p><strong>Description:</strong> A web application to manage daily tasks and to-do listsThis project provides services to other projects like student, teacher dashboard, FSM open marker project.</p>
+                            <p><strong>Description:</strong> A web application to manage daily tasks and to-do listsThis
+                                project provides services to other projects like student, teacher dashboard, FSM open
+                                marker project.</p>
                             <p><strong>Technologies:</strong> Node.js, Express, MongoDB, Zoom APIs.</p>
                             <ul class="project-details">
                                 <li>Developed REST APIs for web applications.</li>
@@ -250,11 +394,72 @@
 
             <div class="thirdExperience">
                 <span class="company">Intern Full Stack Developer</span>
-                <h3>Furtados High Music Pvt. Ltd. (Mumbai - Khar)<span class ="years">(Aug 2021 – Oct 2021)</span></h3>
+                <h3>Furtados High Music Pvt. Ltd. (Mumbai - Khar)<span class="years">(Aug 2021 – Oct 2021)</span></h3>
             </div>
         </section>
-        
 
+        <hr>
+
+        <section class="skillsSections">
+            <span class="skillHeading">What I am good at</span>
+            <h1>Skills</h1>
+            <div class="skillsContainer">
+                <div class="language">
+                    <strong>Languages</strong>
+                    <ul>
+                        <li>NodeJs (ExpressJs, Fastify)</li>
+                        <li>React (MUI)</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Javascript</li>
+                        <li>SQL/NoSQL (MySQL, MongoDB)</li>
+                        <li>Bash</li>
+                        <li>JSON</li>
+                    </ul>
+                </div>
+                <div class="tools">
+                    <strong>Tools</strong>
+                    <ul>
+                        <li>Linux</li>
+                        <li>VSCode</li>
+                        <li>Git</li>
+                        <li>Docker</li>
+                        <li>Redis</li>
+                        <li>Jira</li>
+                        <li>Slack</li>
+                        <li>MYSQL Workbench</li>
+                        <li>MongoDB Compass</li>
+                        <li>Postman</li>
+                        <li>Swagger Open API</li>
+                        <li>Jest</li>
+                        <li>SuperTest(e2e)</li>
+                        <li>PM2</li>
+                    </ul>
+                </div>
+                <div class="services">
+                    <strong>Services</strong>
+                    <ul>
+                        <li>
+                            GCP
+                            <br>(CloudRun, Pub/Sub, Cloud Functions, Firebase)
+                        </li>
+                        <li>GitHub, GitLab</li>
+                        <li>Sentry</li>
+                        <li>Twilio</li>
+                        <li>Zoom API</li>
+                        <li>SonarQube</li>
+                        <li>Payment Gateway</li>
+                        <li>Vercel</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div class="footerContainer">
+                <p>© 2025 Sumit Mhate. All rights reserved.</p>
+            </div>
+        </section>
     </main>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </body>
