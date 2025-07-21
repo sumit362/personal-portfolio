@@ -5,302 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sumit Mhate - NodeJs Developer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Custom Styles for font -->
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
         body {
-            background-color: rgb(0, 0, 33);
-            color: white;
-            font-family: poppins, sans-serif;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 90px;
-            background-color: rgb(6, 6, 48);
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            list-style: none;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-        }
-
-        nav ul li a:hover {
-            font-size: 1.01rem;
-            color: rgb(158, 158, 230)
-        }
-
-        main hr {
-            border: 0;
-            background: #9c97f1;
-            height: 1.2px;
-            margin: 60px 85px;
-        }
-
-        .left {
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-
-        .homeSection {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            margin: 180px 0;
-            height: 350px;
-        }
-
-        .leftSection {
-            font-size: 3.0rem;
-        }
-
-        .leftSection div {
-            text-align: center;
-            font-size: 20px;
-        }
-
-        .purple {
-            font-size: 300%;
-            color: rgb(98, 13, 178);
-            font-weight: 900;
-        }
-
-
-        .company {
-            color: rgb(98, 13, 178);
-            font-weight: 600;
-            font-size: 1.6rem;
-        }
-
-        #element {
-            color: rgb(98, 13, 178);
-            font-weight: 600;
-        }
-
-        .heading {
-            color: gray;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .experienceSection h1 {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font-size: 1.9rem;
-            color: white;
-        }
-
-        .experienceSection h3 {
-            color: gray;
-        }
-
-        .experienceSection h4 {
-            color: #6464c4;
-        }
-
-        .firstExperience,
-        .secondExperience,
-        .thirdExperience {
-            margin: 50px 380px;
-            text-align: left;
-        }
-
-        .years {
-            float: right;
-            color: gray;
-        }
-
-        .projects {
-            margin-top: 20px;
-        }
-
-        .projects h3 {
-            color: white;
-        }
-
-        .projects strong {
-            color: gray;
-            font-size: 20px;
-        }
-
-        .project-details {
-            color: gray;
-        }
-
-        .project-details strong {
-            color: white;
-            font-size: 15px;
-        }
-
-        .projects-listing {
-            margin-bottom: 15px;
-        }
-
-        .aboutmeSection {
-            text-align: center;
-            margin: 100px 0 250px 0;
-            height: 320px;
-        }
-
-        .aboutmeSection h1,
-        .skillsSections h1 {
-            font-size: 1.9rem;
-            color: white;
-            text-align: center;
-        }
-
-        .aboutmeHeading,
-        .skillHeading {
-            display: block;
-            color: gray;
-            text-align: center;
-            margin: 0;
-        }
-
-        .aboutmeSection>div {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 50px 160px;
-        }
-
-        .leftAboutMe {
-            width: 40%;
-            text-align: left;
-            color: gray;
-            font-size: 2.5rem;
-        }
-
-        .leftAboutMe span {
-            color: rgb(98, 13, 178);
-        }
-
-        .rightAboutMe {
-            width: 40%;
-            text-align: left;
-            color: gray;
-            font-size: 1.2rem;
-        }
-
-        .skillsContainer {
-            display: flex;
-            justify-content: space-around;
-            align-items: start;
-            margin: 50px 172px 50px 242px;
-        }
-
-        .language,
-        .tools,
-        .services {
-            width: 30%;
-            position: relative;
-        }
-
-        .tools ul {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px 18px;
-            padding-left: 18px;
-        }
-
-        .language strong,
-        .tools strong,
-        .services strong {
-            font-size: 1.8rem;
-            color: rgb(98, 13, 178);
-        }
-
-        .footer {
-            background: #181836;
-            padding: 42px 0;
-            margin-top: 56px;
-        }
-
-        .footerContainer {
-            text-align: center;
-        }
-
-        .footerContainer p {
-            color: #bdbdbd;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            margin: 0;
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="left">My Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-            </div>
+<body class="bg-[#000021] text-white">
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50">
+        <nav class="flex justify-around items-center h-20 bg-[#060630]/80 backdrop-blur-sm px-4">
+            <div class="text-2xl font-bold">My Portfolio</div>
         </nav>
     </header>
 
-    <main>
-        <section class="homeSection">
-            <div class="leftSection">
-                <div> I am a
-                    <span id="element"></span>
-                    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-                    <script>
-                        var typed = new Typed('#element', {
-                            strings: ['Web Developer'],
-                            typeSpeed: 50,
-                        });
-                    </script>
+    <main class="px-4 sm:px-6 lg:px-8">
+        <!-- Home Section -->
+        <section class="flex flex-col justify-center items-center text-center min-h-[calc(100vh-80px)] py-20">
+            <div class="text-3xl sm:text-4xl md:text-5xl">
+                <div class="mb-4"> I am a
+                    <!-- Typed.js Target -->
+                    <span id="element" class="text-purple-500 font-bold"></span>
                 </div>
-                <span class="purple">SUMIT</span><br><span class="purple">MHATRE</span>
-                <div>
-                    <p>Based in Navi Mumbai, India</p>
+                <span class="text-6xl sm:text-7xl md:text-8xl text-purple-500 font-black tracking-wide">SUMIT</span><br>
+                <span class="text-6xl sm:text-7xl md:text-8xl text-purple-500 font-black tracking-wide">MHATRE</span>
+                <div class="mt-4">
+                    <p class="text-lg text-gray-300">Based in Navi Mumbai, India</p>
                 </div>
             </div>
         </section>
 
-        <hr>
+        <hr class="border-0 bg-[#9c97f1] h-[1.2px] my-16 mx-auto w-11/12 md:w-10/12">
 
-        <section class="aboutmeSection">
-            <span class="aboutmeHeading">Know Me More</span>
-            <h1>About Me</h1>
-            <div>
-                <div class="leftAboutMe">
-                    Hi, I'm <span>Sumit Mhatre</span> — A MERN Stack Developer with Creative Expertise & Years of
-                    Experience.
+        <!-- About Me Section -->
+        <section class="my-20 md:my-32">
+            <div class="text-center mb-12">
+                <span class="text-gray-400">Know Me More</span>
+                <h1 class="text-3xl md:text-4xl font-bold mt-1">About Me</h1>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10 md:gap-16 mx-auto max-w-6xl">
+                <div class="w-full md:w-2/5 text-left text-gray-300 text-2xl md:text-3xl leading-snug">
+                    Hi, I'm <span class="text-purple-400 font-semibold">Sumit Mhatre</span> — A MERN Stack Developer with Creative Expertise & Years of Experience.
                 </div>
-                <div class="rightAboutMe">
+                <div class="w-full md:w-3/5 text-left text-gray-400 text-base md:text-lg">
                     <p>As a dedicated software engineer with 4 years of expertise in building robust, scalable back-end
                         solutions using Node.js, I am also proficient in working with MongoDB, SQL, and React. With a
                         strong foundation in full-stack development, I focus on delivering seamless, user-friendly
@@ -311,115 +66,110 @@
             </div>
         </section>
 
-        <hr>
+        <hr class="border-0 bg-[#9c97f1] h-[1.2px] my-16 mx-auto w-11/12 md:w-10/12">
 
-        <section class="experienceSection">
-            <span class="heading">What I have done so far</span>
-            <h1>Work Experience</h1>
-
-            <div class="firstExperience">
-                <span class="company">Cloud Associate Developer</span>
-                <h3>Niveus Pvt Lmt (Udupi) <span class="years">(May 2023 - Present)</span></h3>
-                <div class="projects">
-                    <ul>
-                        <li class="projects-listing">
-                            <h3>Project 1: AMI (Axis My India – GOI Citizen Xchange App)</h3>
-                            <p><strong>Description:</strong> Discover/benefit from government schemes, explore income
-                                opportunities based on skills, latest new updates and government survey.</p>
-                            <p><strong>Technologies:</strong> Node js, MySQL.</p>
-                            <ul class="project-details">
-                                <li>Designed and developed scalable <strong>REST APIs</strong> using <strong>Fastify
-                                        framework</strong> for high-performance backend services.</li>
-                                <li>Developed APIs for <strong>registration, area of interest, government schemes,
-                                        grievances, surveys, and rewards</strong> modules.</li>
-                                <li>Worked on Geo-location module to capture and process user location data for
-                                    personalized content and services.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <h3>Project 2: DE - Darpan - Phase 2</h3>
-                            <p><strong>Description:</strong> Company’s internal project to manage all the resources and
-                                internal information.</p>
-                            <p><strong>Technologies:</strong> Node js, React js, MySQL.</p>
-                            <ul class="project-details">
-                                <li>Developed responsive user interfaces using <strong>React.js</strong> and
-                                    <strong>Material-UI (MUI)</strong> components.
-                                </li>
-                                <li><strong>Integrated RESTful APIs</strong> to fetch and display dynamic data across
-                                    different UI components.</li>
-                                <li>Applied React concepts such as <strong>state management, props,</strong> and
-                                    <strong>hooks (useState, useEffect)</strong> for component-based development.
-                                </li>
-                                <li>Ensured cross-browser compatibility and responsive design across various screen
-                                    sizes.</li>
-                                <li>Designed and implemented <strong>RESTful APIs</strong> using backend technologies
-                                    (e.g.Node.js).</li>
-                                <li>Handled API endpoints for CRUD operations and integrated them with the frontend.
-                                </li>
-                                <li>Ensured secure and efficient data handling between frontend and backend layers.</li>
-                            </ul>
-                        </li>
-
-                    </ul>
-                </div>
+        <!-- Work Experience Section -->
+        <section class="my-20 md:my-32">
+            <div class="text-center mb-12">
+                <span class="text-gray-400">What I have done so far</span>
+                <h1 class="text-3xl md:text-4xl font-bold mt-1">Work Experience</h1>
             </div>
 
-            <div class="secondExperience">
-                <span class="company">Junior Software Development Engineer</span>
-                <h3>Furtados High Music Pvt. Ltd. (Mumbai - Khar)<span class="years">(Oct 2021 - Apr 2023)</span></h3>
-                <div class="projects">
-                    <ul>
-                        <li class="projects-listing">
-                            <h3>Project 1: Teacher Dashoard</h3>
-                            <p><strong>Description:</strong> Manage all teacher’s activities like batch scheduling,
-                                rescheduling, upcoming sessions, student attendance, send notifications, etc.</p>
-                            <p><strong>Technologies:</strong> Node js, MongoDB, Twilio, Zoom APIs.</p>
-                            <ul class="project-details">
+            <div class="space-y-16 max-w-4xl mx-auto">
+                <!-- Experience 1 -->
+                <div class="firstExperience">
+                    <h3 class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1">
+                        <span class="text-purple-400 font-bold text-xl">Cloud Associate Developer</span>
+                        <span class="text-gray-400 text-sm mt-1 sm:mt-0">(May 2023 - Present)</span>
+                    </h3>
+                    <p class="text-gray-300 text-lg">Niveus Pvt Lmt (Udupi)</p>
+                    <div class="mt-4 space-y-6">
+                        <div class="project">
+                            <h4 class="font-semibold text-lg text-white">Project 1: AMI (Axis My India – GOI Citizen Xchange App)</h4>
+                            <p class="text-gray-400 mt-1"><strong>Description:</strong> Discover/benefit from government schemes, explore income opportunities based on skills, latest new updates and government survey.</p>
+                            <p class="text-gray-400 mt-1"><strong>Technologies:</strong> Node js, MySQL.</p>
+                            <ul class="list-disc list-inside mt-2 text-gray-400 space-y-1 pl-4">
+                                <li>Designed and developed scalable <strong>REST APIs</strong> using <strong>Fastify framework</strong> for high-performance backend services.</li>
+                                <li>Developed APIs for <strong>registration, area of interest, government schemes, grievances, surveys, and rewards</strong> modules.</li>
+                                <li>Worked on Geo-location module to capture and process user location data for personalized content and services.</li>
+                            </ul>
+                        </div>
+                        <div class="project">
+                            <h4 class="font-semibold text-lg text-white">Project 2: DE - Darpan - Phase 2</h4>
+                            <p class="text-gray-400 mt-1"><strong>Description:</strong> Company’s internal project to manage all the resources and internal information.</p>
+                            <p class="text-gray-400 mt-1"><strong>Technologies:</strong> Node js, React js, MySQL.</p>
+                            <ul class="list-disc list-inside mt-2 text-gray-400 space-y-1 pl-4">
+                                <li>Developed responsive user interfaces using <strong>React.js</strong> and <strong>Material-UI (MUI)</strong> components.</li>
+                                <li><strong>Integrated RESTful APIs</strong> to fetch and display dynamic data across different UI components.</li>
+                                <li>Applied React concepts such as <strong>state management, props,</strong> and <strong>hooks (useState, useEffect)</strong> for component-based development.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="secondExperience">
+                     <h3 class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1">
+                        <span class="text-purple-400 font-bold text-xl">Junior Software Development Engineer</span>
+                        <span class="text-gray-400 text-sm mt-1 sm:mt-0">(Oct 2021 - Apr 2023)</span>
+                    </h3>
+                    <p class="text-gray-300 text-lg">Furtados High Music Pvt. Ltd. (Mumbai - Khar)</p>
+                     <div class="mt-4 space-y-6">
+                        <div class="project">
+                            <h4 class="font-semibold text-lg text-white">Project 1: Teacher Dashoard</h4>
+                            <p class="text-gray-400 mt-1"><strong>Description:</strong> Manage all teacher’s activities like batch scheduling, rescheduling, upcoming sessions, student attendance, send notifications, etc.</p>
+                            <p class="text-gray-400 mt-1"><strong>Technologies:</strong> Node js, MongoDB, Twilio, Zoom APIs.</p>
+                            <ul class="list-disc list-inside mt-2 text-gray-400 space-y-1 pl-4">
                                 <li>Developed REST APIs for web applications and worked on the notification part.</li>
                             </ul>
-                        </li>
-                        <li>
-                            <h3>Project 2: FSM Online Admin Portal </h3>
-                            <p><strong>Description:</strong> A web application to manage daily tasks and to-do listsThis
-                                project provides services to other projects like student, teacher dashboard, FSM open
-                                marker project.</p>
-                            <p><strong>Technologies:</strong> Node.js, Express, MongoDB, Zoom APIs.</p>
-                            <ul class="project-details">
-                                <li>Developed REST APIs for web applications.</li>
+                        </div>
+                         <div class="project">
+                            <h4 class="font-semibold text-lg text-white">Project 2: FSM Online Admin Portal</h4>
+                            <p class="text-gray-400 mt-1"><strong>Description:</strong> A web application to manage daily tasks and to-do lists. This project provides services to other projects like student, teacher dashboard, FSM open marker project.</p>
+                            <p class="text-gray-400 mt-1"><strong>Technologies:</strong> Node.js, Express, MongoDB, Zoom APIs.</p>
+                            <ul class="list-disc list-inside mt-2 text-gray-400 space-y-1 pl-4">
+                               <li>Developed REST APIs for web applications.</li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <div class="thirdExperience">
-                <span class="company">Intern Full Stack Developer</span>
-                <h3>Furtados High Music Pvt. Ltd. (Mumbai - Khar)<span class="years">(Aug 2021 – Oct 2021)</span></h3>
+                <!-- Experience 3 -->
+                <div class="thirdExperience">
+                     <h3 class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-1">
+                        <span class="text-purple-400 font-bold text-xl">Intern Full Stack Developer</span>
+                        <span class="text-gray-400 text-sm mt-1 sm:mt-0">(Aug 2021 – Oct 2021)</span>
+                    </h3>
+                    <p class="text-gray-300 text-lg">Furtados High Music Pvt. Ltd. (Mumbai - Khar)</p>
+                </div>
             </div>
         </section>
 
-        <hr>
+        <hr class="border-0 bg-[#9c97f1] h-[1.2px] my-16 mx-auto w-11/12 md:w-10/12">
 
-        <section class="skillsSections">
-            <span class="skillHeading">What I am good at</span>
-            <h1>Skills</h1>
-            <div class="skillsContainer">
-                <div class="language">
-                    <strong>Languages</strong>
-                    <ul>
+        <!-- Skills Section -->
+        <section class="my-20 md:my-32">
+            <div class="text-center mb-12">
+                <span class="text-gray-400">What I am good at</span>
+                <h1 class="text-3xl md:text-4xl font-bold mt-1">Skills</h1>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-start gap-12 md:gap-16 max-w-6xl mx-auto">
+                <!-- Languages -->
+                <div class="w-full md:w-1/3">
+                    <strong class="text-2xl text-purple-400 font-bold">Languages</strong>
+                    <ul class="mt-4 space-y-2 text-gray-300">
                         <li>NodeJs (ExpressJs, Fastify)</li>
                         <li>React (MUI)</li>
-                        <li>HTML</li>
-                        <li>CSS</li>
+                        <li>HTML & CSS</li>
                         <li>Javascript</li>
                         <li>SQL/NoSQL (MySQL, MongoDB)</li>
                         <li>Bash</li>
-                        <li>JSON</li>
                     </ul>
                 </div>
-                <div class="tools">
-                    <strong>Tools</strong>
-                    <ul>
+                <!-- Tools -->
+                <div class="w-full md:w-1/3">
+                    <strong class="text-2xl text-purple-400 font-bold">Tools</strong>
+                    <ul class="mt-4 grid grid-cols-2 gap-x-6 gap-y-2 text-gray-300">
                         <li>Linux</li>
                         <li>VSCode</li>
                         <li>Git</li>
@@ -427,22 +177,20 @@
                         <li>Redis</li>
                         <li>Jira</li>
                         <li>Slack</li>
-                        <li>MYSQL Workbench</li>
+                        <li>MySQL Workbench</li>
                         <li>MongoDB Compass</li>
                         <li>Postman</li>
-                        <li>Swagger Open API</li>
+                        <li>Swagger</li>
                         <li>Jest</li>
-                        <li>SuperTest(e2e)</li>
+                        <li>SuperTest</li>
                         <li>PM2</li>
                     </ul>
                 </div>
-                <div class="services">
-                    <strong>Services</strong>
-                    <ul>
-                        <li>
-                            GCP
-                            <br>(CloudRun, Pub/Sub, Cloud Functions, Firebase)
-                        </li>
+                <!-- Services -->
+                <div class="w-full md:w-1/3">
+                    <strong class="text-2xl text-purple-400 font-bold">Services</strong>
+                    <ul class="mt-4 space-y-2 text-gray-300">
+                        <li>GCP (CloudRun, Pub/Sub, Cloud Functions, Firebase)</li>
                         <li>GitHub, GitLab</li>
                         <li>Sentry</li>
                         <li>Twilio</li>
@@ -455,13 +203,25 @@
             </div>
         </section>
 
-        <section class="footer">
-            <div class="footerContainer">
-                <p>© 2025 Sumit Mhate. All rights reserved.</p>
-            </div>
-        </section>
     </main>
+    
+    <!-- Footer Section -->
+    <footer class="bg-[#181836] py-8 mt-16">
+        <div class="text-center">
+            <p class="text-gray-400 text-base">© 2025 Sumit Mhate. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Typed.js for typing animation -->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['NodeJs Developer','Web Developer'],
+            typeSpeed: 50,
+            backSpeed: 25,
+            loop: true
+        });
+    </script>
 </body>
 
 </html>
